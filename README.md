@@ -1,0 +1,5 @@
+# SCT_WD_4
+SkillBuild Technology Internship Web Development Task 4 - TO-DO WEB APP
+
+Develop a basic to-do app that enables a user to add maintain tasks.
+Allow users to add/organize items in lists. Mark them Completed, Edit them, Set Date & Time of tasks
