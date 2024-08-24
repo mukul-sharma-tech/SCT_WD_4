@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="icon" href="logo.jpg" type="image/icon_type">
+
+</head>
+<body>
+  <div class="container">
+    <div class="todo-app">
+        <h2>To-Do List
+            <img src="logo.jpg" alt="logo">
+        </h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add your note">
+          <button onclick="addTask()">Add</button>
+        </div>
+
+        <ul id="list-container">
+          <!-- <li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li> -->
+        </ul>
+        <p id="date-time"></p>
+
+    </div>
+  </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <div class="container">
+    <div class="todo-app">
+        <h2>To-Do List
+            <img src="logo.jpg" alt="logo">
+        </h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add your note">
+          <button onclick="addTask()">Add</button>
+        </div>
+
+        <ul id="list-container">
+          <li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li>
+        </ul>
+        <p id="date-time"></p>
+    </div>
+  </div>
+
+    <script src="todo.js"></script>
+    <script>
+        function addTask(){
+            if(inputBox.value === ''){
+                alert("You must write something!");
+            }
+            else{
+                let li = document.createElement("li");
+                li.innerHTML = inputBox.value + " - " + getCurrentDateTime();
+                listContainer.appendChild(li);
+                let span = document.createElement("span");
+                span.innerHTML = "\u00d7";
+                li.appendChild(span);
+            }
+            inputBox.value = "";
+            saveData();
+        }
+
+        function getCurrentDateTime() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString();
+            const formattedTime = now.toLocaleTimeString();
+            return `${formattedDate} ${formattedTime}`;
+        }
+
+        // Rest of your existing code...
+        listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        saveData();
+    } 
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
+    }
+}, false);
+
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showTask();
+    </script>
+</body>
+</html> -->
